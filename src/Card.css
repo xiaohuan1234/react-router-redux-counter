@@ -1,0 +1,19 @@
+.card {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 25px 35px 50px 0px #ccc;
+}
+.card input {
+  background: transparent;
+  color: white;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  font-size: 50px;
+  text-align: center!important;
+}
+.card input:focus {
+    outline: none !important;
+}
