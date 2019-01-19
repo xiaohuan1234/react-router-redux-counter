@@ -23,27 +23,3 @@ header a {
   padding: 0 20px;
   
 }
-.main {
-  width: 100vw;
-  height: 100vh;
-  font-family: Montserrat;
-  font-weight: 400;
-  background-color: #EEF2F5;
-  text-align: center;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.grid {
-  margin: 0 40px;
-  width: 400px;
-  height: 100px;
-}
-
-/*.count-display,*/
-/*.increment,*/
-/*.decrement {*/
-/*  margin: 5px;*/
-/*  padding: 20px;*/
-/*}*/

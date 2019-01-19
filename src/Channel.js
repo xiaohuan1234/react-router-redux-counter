@@ -1,4 +1,5 @@
 import React, { Component } from 'react';// eslint-disable-line no-unused-vars
+import './Channel.css';
 import Card from './Card';
 import Control from './Control';
 
