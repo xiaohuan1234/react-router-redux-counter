@@ -1,7 +1,6 @@
 import React, { Component } from 'react';// eslint-disable-line no-unused-vars
 import './App.css';
-import Card from './Card';
-import Control from './Control';
+import Channel from './Channel';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,11 +13,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header"></div>
-        <div className="main">
-          <Control controlDirection={"DECREMENT"} channel={"blue"} onClick={this.onClick}/>
-          <Card colorSelected="green" count={0} onType={()=>{console.log("typed");}}/>
-          <Control controlDirection={"INCREMENT"} channel={"blue"} onClick={this.onClick}/>
-        </div>        
+        
+         <Channel color="blue" onClick={this.onClick}/>
+        
       </div>
     );
   }
