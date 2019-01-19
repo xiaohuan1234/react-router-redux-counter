@@ -1,7 +1,17 @@
 import React, { Component } from 'react';// eslint-disable-line no-unused-vars
 import './App.css';
 import Channel from './Channel';
-import {Route, withRouter} from 'react-router-dom';
+import {Route, withRouter, NavLink} from 'react-router-dom';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Montserrat:200, 300,400,700', 'sans-serif']
+  }
+});
+
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +23,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="header"></div>
+        <header>
+        <NavLink to="/red" activeClassName="selected">Red</NavLink>
+        <NavLink to="/green" activeClassName="selected">Green</NavLink>
+        <NavLink to="/blue" activeClassName="selected">Blue</NavLink>
+      </header>
         <Route path="/:color" component={(props)=><Channel color={props.match.params.color} onClick={this.onClick}/>}/>
       </div>
     );
