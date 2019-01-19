@@ -4,7 +4,7 @@ export const DIRECT_SET = 'DIRECT_SET';
 export const RED = 0;
 export const GREEN = 1;
 export const BLUE = 2;
-
+export const ControlDirection = Object.freeze({"INCREMENT":1, "DECREMENT":2});
 export function handleIncrement(channel) {
     console.log("inc action creator called: ", channel);
     return {type: INCREMENT, channel: channel};
