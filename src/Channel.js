@@ -1,7 +1,6 @@
 import React, { Component } from 'react';// eslint-disable-line no-unused-vars
 import Card from './Card';
 import Control from './Control';
-import {withRouter} from 'react-router-dom';
 
 const Channel = (props) => (
     <div className="main">

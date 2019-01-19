@@ -18,7 +18,7 @@ class Control extends Component {
   render() {
     const {controlDirection, channel} = this.props;
     return (
-        <button className="grid control" onClick={this.onClick.bind(this, {controlDirection, channel})}>
+        <button style={{color: channel}} className="grid control" onClick={this.onClick.bind(this, {controlDirection, channel})}>
             <FontAwesomeIcon icon={controlIcons[controlDirection]} />
         </button>
     );
