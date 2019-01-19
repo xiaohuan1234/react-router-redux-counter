@@ -1,7 +1,9 @@
 import React, { Component } from 'react';// eslint-disable-line no-unused-vars
 import './App.css';
 import Channel from './Channel';
+import { connect } from 'react-redux';
 import {Route, withRouter, NavLink} from 'react-router-dom';
+import {handleIncrement, handleDecrement, handleType} from './actionCreators';
 import WebFont from 'webfontloader';
 
 WebFont.load({
@@ -31,4 +33,12 @@ class App extends Component {
     );
   }
 }
-export default withRouter(App);
+var mapStateToProps = (reduxState) =>{
+  console.log("in mapStateToProps:", reduxState);
+  return {
+    // count: reduxState.count
+    ...reduxState
+  };
+};
+export default withRouter(connect(mapStateToProps, {handleIncrement, handleDecrement, handleType})(App));
+
