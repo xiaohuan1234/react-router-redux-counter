@@ -18,16 +18,13 @@ class App extends Component {
     this.onClick = this.onClick.bind(this);
   }
   onClick(controlDirection, channel) {
-    console.log("clicked:", controlDirection, channel);
     if(controlDirection==="INCREMENT") {
         this.props.handleIncrement(channel);
     } else if(controlDirection==="DECREMENT") {
         this.props.handleDecrement(channel);
     }
-    console.log("clicked:", controlDirection, channel);
   }
   render() {
-    console.log(this.props.values);
     return (
       <div className="App">
         <header>
@@ -35,15 +32,13 @@ class App extends Component {
           <NavLink to="/green" activeClassName="selected">Green</NavLink>
           <NavLink to="/blue" activeClassName="selected">Blue</NavLink>
         </header>
-        <Route path="/:color" component={(props)=><Channel {...props} value={this.props.values[props.match.params.color]} color={props.match.params.color} onClick={this.onClick}/>}/>
+        <Route path="/:color" component={(props)=><Channel value={this.props.values[props.match.params.color]} color={props.match.params.color} onClick={this.onClick}/>}/>
       </div>
     );
   }
 }
 var mapStateToProps = (reduxState) =>{
-  console.log("in mapStateToProps:", reduxState);
   return {
-    // count: reduxState.count
     ...reduxState
   };
 };

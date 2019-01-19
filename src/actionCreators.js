@@ -6,11 +6,9 @@ export const GREEN = 1;
 export const BLUE = 2;
 export const ControlDirection = Object.freeze({"INCREMENT":1, "DECREMENT":2});
 export function handleIncrement(channel) {
-    console.log("inc action creator called: ", channel);
     return {type: INCREMENT, channel: channel};
 }
 export function handleDecrement(channel) {
-    console.log("dec action creator called");
     return {type: DECREMENT, channel: channel};
 }
 

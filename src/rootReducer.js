@@ -1,4 +1,4 @@
-import {INCREMENT, DECREMENT, DIRECT_SET, RED, BLUE, GREEN} from './actionCreators';
+import {INCREMENT, DECREMENT, DIRECT_SET} from './actionCreators';
 const initialState = {
     count: 1,
     values: {
@@ -8,7 +8,6 @@ const initialState = {
     }
 };
 export default function rootReducer (state=initialState, action) {
-    console.log("rootReducer called with ", state, action);
     var newState = {...state};
     newState.values = {...state.values};
     switch (action.type) {
