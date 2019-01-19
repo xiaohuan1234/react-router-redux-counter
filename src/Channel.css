@@ -1,6 +1,6 @@
 .main {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 100px);
   font-family: Montserrat;
   font-weight: 400;
   background-color: #EEF2F5;
