@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Card colorSelected="purple" count={0} onType={()=>{console.log("typed");}}/>
+        <Card colorSelected="green" count={0} onType={()=>{console.log("typed");}}/>
       </div>
     );
   }
